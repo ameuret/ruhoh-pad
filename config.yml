@@ -17,12 +17,16 @@ production_url: "http://sample.com"
 #  set base_path: "/staff/me/~/blog"
 # NOTE: base_path is never added in development mode (for convenience).
 base_path: "/"
+"date_format": "%d/%m/%Y"
 
 # Tell ruhoh which folder will model the "theme"
-twitter :
+tweem :
   # Tells ruhoh which collection class to use for this folder.
   # Here we use "theme" which makes this folder the theme.
   use : "theme"
+
+twitter :
+  use : "ignore"
 
 _root:
   summary_lines: 20
@@ -76,26 +80,10 @@ widgets :
     # -- config for google --
     tracking_id : 'UA-123-12'
 
-    # -- config for getclicky  --
-    # site_id :
-
   comments :
     use : disqus
     enable : true
-    # -- config for disqus --
     short_name : jekyllbootstrap # Change This!
-
-    # -- config for livefyre --
-    # site_id : 123
-
-    # -- config for intensedebate --
-    # account : 123abc
-
-    # -- config for facebook --
-    # appid : 123
-    # num_posts: 5
-    # width: 580
-    # colorscheme: light
 
   google_prettify :
     linenums : true

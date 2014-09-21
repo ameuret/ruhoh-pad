@@ -1,0 +1,10 @@
+notification :libnotify
+  
+guard(:haml,
+      { input: 'src/layouts',
+        output: 'layouts'})
+
+guard(:sass,
+      input: 'src/sass',
+      output: 'stylesheets',
+      extension: '')

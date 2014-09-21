@@ -1,11 +1,9 @@
-title : Blog Title
-tagline: Blog Tagline
+title : Journal
+tagline: Un journal en ligne
 author :
-  name : Firstname Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Arnaud Meuret
+  email : arnaud@meuret.net
+  twitter : ameuret
 
 navigation :
   - archive

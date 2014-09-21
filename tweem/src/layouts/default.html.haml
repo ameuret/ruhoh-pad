@@ -1,0 +1,51 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title {{ page.title }}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    {{# page.description }}
+    %meta{:content => "{{ . }}", :name => "description"}/
+    {{/ page.description }}
+    %meta{:content => "{{ data.author.name }}", :name => "author"}/
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    / Le styles
+    {{# stylesheets.load }}
+    bootstrap.min.css
+    style.css
+    google_prettify/sons-of-obsidian.css
+    {{/ stylesheets.load }}
+    / Le fav and touch icons
+    /
+      Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  %body
+    .navbar
+      .navbar-inner
+        .container-narrow
+          %a.brand{:href => "{{urls.base_path}}"} {{ data.title }}
+          %ul.nav
+            {{# data.navigation?to__root }}
+            {{> pages_list }}
+            {{/ data.navigation?to__root }}
+    .container-narrow
+      .content
+        %h1 Houraaa !
+        %p Now add a perfect sticky footer and inject Actime's tweaks
+        {{{ content }}}
+      %hr/
+      .footer
+        %p
+          \&copy; {{ data.author.name }} 2013
+          with help from
+          %a{:href => "http://ruhoh.com", :target => "_blank", :title => "The Definitive Technical Blogging Framework"} ruhoh
+          and
+          %a{:href => "http://twitter.github.com/bootstrap/", :target => "_blank"} Twitter Bootstrap
+    / /container
+    {{{ widgets.google_prettify }}}
+    {{{ widgets.analytics }}}
